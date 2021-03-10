@@ -1,0 +1,12 @@
+version: "2.0"
+
+#AS RULES é UM TIPO DE DADOS DE TREINAMENTO USADOS PARA TREINAR O MODELO DE DIALOGO, ELAS DESCREVEM PEQUENAS PARTES DE CONVERSAS
+#QUE DEVEM SEMPRE SEGUIR O MESMO CAMINHO.
+
+
+rules:
+
+- rule: Se despede sempre que alguem agradecer
+  steps:
+  - intent: thankyou
+  - action: utter_despedida

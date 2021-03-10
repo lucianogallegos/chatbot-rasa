@@ -1,0 +1,29 @@
+version: "2.0"
+
+#AS STORIES SãO UM TIPO DE DADO DE TREINAMENTO USADO PARA TREINAR O MODELO DE GERENCIAMENTO DE DIáLOGO DO CHATBOT.
+#ELAS PODEM SER USADAS PARA TREINAR MODELOS CAPAZES DE GENERELAIZAR CAMINHOS DE CONVERSAÇAO
+
+stories:
+
+- story: path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: order_pizza
+  - action: utter_order
+
+- story: path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: list_size
+  - action: utter_list_size
+  - action: utter_order
+  - intent: order_pizza
+
+- story: path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: order_pizza
+  - action: utter_confirm_order

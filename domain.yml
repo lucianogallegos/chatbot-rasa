@@ -1,0 +1,45 @@
+version: "2.0"
+
+#CRIAR OS TEXTOS DE RESPOSTA DO NOSSO BOT
+
+intents:
+  - greet
+  - order_pizza
+  - list_tops
+  - list_size
+  - thankyou
+
+entities:
+  - size
+  - tops
+  - qtd_tops
+  
+responses:
+  utter_greet:
+  - text: "Oi! Bem vindo ao AkiraPizza. Posso anotar seu pedido?"
+
+  utter_list_tops:
+  - text: "Temos diversos sabores: Pepperoni, Calabresa, Frango, Portuguesa."
+
+  utter_list_size:
+  - text: "Temos tamanhos: pequeno, medio, grande e familia."
+
+  utter_order:
+  - text: "Certo, pode fazer seu pedido."
+  
+  utter_confirm_order:
+  - text: "Posso confirmar seu pedido, pizza de {tops} tamanho {size}?"
+  
+  utter_size:
+  - text: "Qual tamanho de pizza você deseja?"
+  
+  utter_tops:
+  - text: "Qual sabor?"
+
+  utter_despedida:
+  - text: "Tchau! até a próxima! =) "
+
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
